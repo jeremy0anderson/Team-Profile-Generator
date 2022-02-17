@@ -52,7 +52,7 @@ function input() {
     ]);
 }
 function writeToFile(fileName, data) {
-    fs.writeFile(`${fileName}.md`, data,
+    fs.writeFile(`${fileName}.html`, data,
         (err) => err ? console.error(err) : console.log(`${fileName}.md has been generated.`))
 }
 function init() {
