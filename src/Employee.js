@@ -17,7 +17,7 @@ class Employee {
         return "Employee";
     }
 }
-
+module.exports = Employee;
 class Manager extends Employee{
     constructor(name, id, email, officeNumber){
         super(name, id, email);
@@ -55,6 +55,7 @@ class Intern extends Employee{
 }
 
 function generateEmployee(data){
+    if (data.role)
    // [${},${},${},${},${},${},${},${},${}]
     return `
 <!DOCTYPE html>
@@ -84,4 +85,4 @@ function generateEmployee(data){
     
     `
 }
-module.exports = generateEmployee;
+module.exports = {generateEmployee, Employee, Manager, Engineer, Intern};
