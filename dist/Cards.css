@@ -1,0 +1,31 @@
+*{
+    font-family: sans-serif;
+}
+body {
+    display: block;
+    background-color: gray;
+}
+.cards-container{
+    display: block!important;
+    background-color: #c0c7cf;
+    margin: 10px;
+    justify-content: space-around;
+}
+.card-container{
+    justify-content: space-evenly;
+    display: inline-grid;
+    grid-template: 150px 150px / auto auto auto;
+    margin: 10px;
+    background-color: lightgrey;
+}
+.card{
+    width: 225px;
+    padding: 10px;
+}
+.card-header{
+    text-align: center;
+}
+.row{
+
+}
+
