@@ -5,5 +5,12 @@ describe('Employee', () =>{
         const employee = new Employee('name','id', 'email');
         expect(employee.getRole()).toEqual('Employee');
         expect(employee.getEmail()).toEqual('email');
+        expect(employee.getId()).toEqual('id');
+        expect(employee.getEmail()).toEqual('email')
+        expect(employee).toEqual({
+            name: 'name',
+            id: 'id',
+            email: 'email'
+        });
     });
 });
