@@ -8,9 +8,10 @@ class Card {
             this.role = data.getRole();
             switch (this.role) {
                   case "Manager":
+                        this.role = data.getRole();
                         return this.card =
                             `<div class="card" id="manager-${data.id}">
-                                <h3 class="card-header">${data.name} / ${data.role}</h3>
+                                <h3 class="card-header">${data.name} / ${this.role}</h3>
                                 <section class="content-section">
                                     <div>
                                         <h4>Employee ID:</h4>
@@ -25,9 +26,10 @@ class Card {
                                 </section>
                             </div>`;
                   case "Engineer":
+                        this.role = data.getRole();
                         return this.card =
                             `<div class="card" id="engineer-${data.id}">
-                                <h3 class="card-header">${data.name} / ${data.role}</h3>
+                                <h3 class="card-header">${data.name} / ${this.role}</h3>
                                 <section class="content-section">
                                     <div>
                                         <h4>Employee ID:</h4>
@@ -42,9 +44,10 @@ class Card {
                                 </section>
                             </div>`;
                   case "Intern":
+                        this.role = data.getRole();
                         return this.card =
                             `<div class="card" id="intern-${data.id}">
-                                <h3 class="card-header">${data.name} / ${data.role}</h3>
+                                <h3 class="card-header">${data.name} / ${this.role}</h3>
                                 <section class="content-section">
                                     <div>
                                         <h4>Employee ID:</h4>
