@@ -1,4 +1,9 @@
-const jest = require('jest');
-const {Employee, Engineer, Manager, Intern} = require('../src/Employee');
+const Employee = require('../lib/Employee');
 
-describe
+describe('Employee', () =>{
+    it('creates a new employee key/value pair', () =>{
+        const employee = new Employee('name','id', 'email');
+        expect(employee.getRole()).toEqual('Employee');
+        expect(employee.getEmail()).toEqual('email');
+    });
+});

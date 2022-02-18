@@ -1,7 +1,7 @@
 const {prompt} = require('inquirer');
 const fs = require('fs');
 const {jest} = require('jest');
-const {generateEmployee, Employee, Manager, Intern, Engineer} = require('./src/Employee');
+const {generateEmployee, Employee, Manager, Intern, Engineer} = require('./lib/Employee');
 const managerInfo = [
     {type: "input",
         name: "name",
