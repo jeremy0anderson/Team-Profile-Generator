@@ -29,4 +29,5 @@ body{
 .card-header{
     display: block;
     margin: 0 5px 10px 0;
+    padding: 2px;
 }
