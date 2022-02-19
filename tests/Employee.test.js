@@ -7,6 +7,7 @@ describe('Employee', () =>{
         expect(employee.getEmail()).toEqual('email');
         expect(employee.getId()).toEqual('id');
         expect(employee.getEmail()).toEqual('email')
+        expect(employee.getName()).toEqual('name');
         expect(employee).toEqual({
             name: 'name',
             id: 'id',
