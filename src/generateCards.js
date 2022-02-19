@@ -1,8 +1,3 @@
-const Employee = require('../lib/Employee');
-const Manager = require('../lib/Manager');
-const Intern = require('../lib/Intern');
-const Engineer = require('../lib/Engineer');
-const fs = require('fs');
 class Card {
       constructor(data) {
             this.role = data.getRole();
@@ -10,69 +5,72 @@ class Card {
                   case "Manager":
                         this.role = data.getRole();
                         return this.card =
-`<div class="card" id="manager-${data.id}">
-<h3 class="card-header">${data.name} / ${this.role}</h3>
-<section class="content-section">
-<div>
-    <h4>Employee ID:</h4>
-    <p>${data.id}</p>
-</div>
-<div>
-    <h4>Email:</h4>
-    <a class="card-body" href="mailto:${data.email}">${data.email}</a>
-</div>
-<div>
-    <h4>Office Number:</h4>
-    <p>${data.office}</p>
-</div>
-</section>
-</div>`;
+                              `<section class="container">
+                                    <div class="card">
+                                    <h5 class="card-panel">
+                                        <span class="row card-header">${data.name}</span>
+                                        <span class="row subheader">${this.role}</span></h5>
+                                    <div class="card-content">
+                                        <h6 class="card-header">ID:</h6>
+                                        <p class="subheader">${data.id}</p>
+                                    </div>
+                                    <div class="card-action card-content">
+                                        <h6 class="card-header">Email: </h6>
+                                        <a class="subheader" href="mailto:${data.email}" >${data.email}</a>
+                                    </div>
+                                    <div class="card-action card-content">
+                                        <h6 class="card-header">Office Number: </h6>
+                                        <p class="subheader">${data.office}</p>
+                                    </div>
+                                </div>
+                              </section>`;
                   case "Engineer":
                         this.role = data.getRole();
                         return this.card =
-`<div class="card" id="engineer-${data.id}">
-<h3 class="card-header">${data.name} / ${this.role}</h3>
-<section class="content-section">
-<div>
-    <h4>Employee ID:</h4>
-    <p>${data.id}</p>
-</div>
-<div>
-    <h4>Email:</h4>
-    <a class="card-body" href="mailto:${data.email}">${data.email}</a>
-</div>
-<div>
-    <h4>GitHub:</h4>
-    <p>${data.github}</p>
-</div>
-</section>
-</div>`;
+                              `<section class="container">
+                                     <div class="card">
+                                          <h5 class="card-panel">
+                                              <span class="row card-header">${data.name}</span>
+                                              <span class="row subheader">${this.role}</span></h5>
+                                          <div class="card-content">
+                                              <h6 class="card-header">ID:</h6>
+                                              <p class="subheader">${data.id}</p>
+                                          </div>
+                                          <div class="card-action card-content">
+                                              <h6 class="card-header">Email: </h6>
+                                              <a class="subheader" href="mailto:${data.email}" >${data.email}</a>
+                                          </div>
+                                          <div class="card-action card-content">
+                                              <h6 class="card-header">GitHub: </h6>
+                                              <a class="subheader" href="https://github.com/${data.github}">${data.github}</a>
+                                          </div>
+                                      </div>
+                              </section>`;
                   case "Intern":
                         this.role = data.getRole();
-                        return this.card =
-`<div class="card" id="intern-${data.id}">
-<h3 class="card-header">${data.name} / ${this.role}</h3>
-<section class="content-section">
-<div>
-    <h4>Employee ID:</h4>
-    <p>${data.id}</p>
-</div>
-<div>
-    <h4>Email:</h4>
-    <a class="card-body" href="mailto:${data.email}">${data.email} </a>
-</div>
-<div>
-    <h4>School:</h4>
-    <p>${data.school}</p>
-</div>
-</section>
-</div>`;
+                        return this.card = `<section class="container">
+                              <div class="card">
+                              <h5 class="card-panel">
+                              <span class="row card-header">${data.name}</span>
+                              <span class="row subheader">${this.role}</span></h5>
+                              <div class="card-content">
+                              <h6 class="card-header">ID:</h6>
+                              <p class="subheader">${data.id}</p>
+                              </div>
+                              <div class="card-action card-content">
+                              <h6 class="card-header">Email: </h6>
+                              <a class="subheader" href="mailto:${data.email}" >${data.email}</a>
+                              </div>
+                              <div class="card-action card-content">
+                              <h6 class="card-header">School: </h6>
+                              <p class="subheader">${data.school}</p>
+                              </div>
+                              </div>
+                              </section>`;
                   default:
                         console.log('Invalid Data');
                         break;
             }
       }
 }
-
-
 module.exports = Card;

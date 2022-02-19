@@ -1,0 +1,30 @@
+body{
+    display: grid;
+    grid-template: auto auto auto  / 33% 33% 33%;
+}
+.container{
+    display: block;
+    padding: 10px;
+    margin: auto;
+}
+
+.card {
+}
+.card-panel{
+    display: block!important;
+    background-color: orangered;
+    color: whitesmoke;
+}
+.card-action{
+    padding: 10px;
+}
+
+.row{
+    font-size: smaller;
+}
+.subheader{
+    font-size: 12pt;
+}
+.card-header{
+    margin: 0 5px 10px 0;
+}

@@ -85,10 +85,12 @@ let fileHead = `
 <html lang="en">
 <head>
     <title>Employees</title>
-    <link rel="stylesheet" href="./dist/Cards.css"/>
-    </head>
-    <body>`;
-const fileClose = `</body></html>`
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="colors.css"/>
+</head>
+<body>`;
+const fileClose = `</body>
+</html>`;
 //method for generating an HTML file containing tags/elements created based on user input
 function generateFile(data) {
     fs.writeFile(`./dist/Employees.html`, data,
@@ -129,9 +131,9 @@ function mainMenu(){
                  return getInterns();
             case "Finish building team":
                 for (let i = 0; i < employees.length; i++) {
-                    htmlComponents+=employees[i].card;
+                    htmlComponents+="\n"+employees[i].card;
                 }
-                const file = fileHead+=htmlComponents+=fileClose;
+                const file = fileHead+ "\n" + htmlComponents+"\n"+fileClose;
                 return generateFile(file);
         }
     });
