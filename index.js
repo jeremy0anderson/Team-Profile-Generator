@@ -1,7 +1,7 @@
 //prompt question declaration / module imports.
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Card = require('./src/generateCards');
+const generate = require('./src/generateCards');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
@@ -100,7 +100,7 @@ function generateFile(data) {
 //prompts the user for a manager's information and then creates an object identifying the employee's role + the appropriately formatted HTML to add to a file.
 function getManager(){
      inquirer.prompt(managerInfo).then(answers => {
-        return employees.push(new Card(new Manager(answers.name, answers.id, answers.email, answers.office)));
+        return employees.push(new Manager(answers.name, answers.id, answers.email, answers.office));
     }).then(employees => {return employees.card})
         .then((menu) => mainMenu());
 }
@@ -108,14 +108,14 @@ function getManager(){
 //prompts the user for an engineer's information and then creates an object identifying the employee's role + the appropriately formatted HTML to add to a file.
 function getEngineers(){
    return inquirer.prompt(engineerInfo).then((answers) => {
-       return employees.push(new Card(new Engineer(answers.name, answers.id, answers.email, answers.github)));
+       return employees.push(new Engineer(answers.name, answers.id, answers.email, answers.github));
    }).then(menu => mainMenu());
 }
 
 //prompts the user for an intern's information and then creates an object identifying the employee's role + the appropriately formatted HTML to add to a file.
 function getInterns(){
      return inquirer.prompt(internInfo).then(answers => {
-         return employees.push(new Card(new Intern(answers.name, answers.id, answers.email, answers.school)));
+         return employees.push(new Intern(answers.name, answers.id, answers.email, answers.school));
     }).then(menu => mainMenu());
 }
 
@@ -131,7 +131,7 @@ function mainMenu(){
                  return getInterns();
             case "Finish building team":
                 for (let i = 0; i < employees.length; i++) {
-                    htmlComponents+="\n"+employees[i].card;
+                    htmlComponents+=generate(employees[i]);
                 }
                 const file = fileHead+ "\n" + htmlComponents+"\n"+fileClose;
                 return generateFile(file);

@@ -4,7 +4,8 @@
   "description": "Generates an HTML file that displays members of your team based on user input using node.js",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "jest": {
   "verbose": true

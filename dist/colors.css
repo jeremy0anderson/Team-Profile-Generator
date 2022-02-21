@@ -2,31 +2,29 @@ body{
     display: grid;
     grid-template: auto auto  / auto auto auto;
 }
+/*.container{*/
+/*    display: block;*/
+/*    padding: 10px;*/
+/*    margin: auto;*/
+/*    width: 90%;*/
+/*}*/
 .container{
-    display: block;
-    padding: 10px;
-    margin: auto;
-    width: 100%;
-}
-
-.card {
-}
+    justify-content: space-evenly;
+ }
 .card-panel{
-    display: block!important;
     background-color: orangered;
     color: whitesmoke;
+    margin-bottom: auto;
 }
 .card-action{
-    padding: 10px;
-    margin: 5px;
+
 }
 .row{
-    font-size: smaller;
 }
 .subheader{
     font-size: small;
 }
 .card-header{
     display: block;
-    margin: 0 5px 10px 0;
+
 }
