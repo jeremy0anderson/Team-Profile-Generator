@@ -1,6 +1,5 @@
 body{
-    display: grid;
-    grid-template: auto auto  / auto auto auto;
+
 }
 /*.container{*/
 /*    display: block;*/
@@ -8,13 +7,18 @@ body{
 /*    margin: auto;*/
 /*    width: 90%;*/
 /*}*/
+.cards-section{
+    display: grid;
+    grid-template: auto auto  / auto auto auto;
+}
 .container{
     justify-content: space-evenly;
  }
 .card-panel{
     background-color: orangered;
     color: whitesmoke;
-    margin-bottom: auto;
+    /*padding: 15px;*/
+    /*margin: auto;*/
 }
 .card-action{
 

@@ -1,3 +1,6 @@
+const Engineer = require("../lib/Engineer");
+const Manager = require("../lib/Manager");
+const Intern = require('../lib/Intern');
 const generate = function(data){
       let cards = [];
       this.role = data.getRole();
@@ -52,7 +55,8 @@ const generate = function(data){
                 <a class="subheader">${this.school = data.getSchool()}</a>
             </div>
       </div>
-</section>`;
+</section>
+`;
                   cards.push(internCard);
                   return cards;
             case "Engineer":
@@ -89,4 +93,4 @@ const generate = function(data){
 }
 
 
-module.exports = generate;
+module.exports = {generate, Manager, Engineer, Intern};
