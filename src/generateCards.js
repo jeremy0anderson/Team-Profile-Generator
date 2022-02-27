@@ -13,7 +13,7 @@ const generate = function(data){
     <div class="card">
         <h5 class="card-panel">
             <span class="card-header">${data.name}</span>
-            <span class="subheader">${this.role = data.getRole()}</span>
+            <span class="subheader">${this.role}</span>
         </h5>
         <div class="card-action card-content">
             <h6 class="card-header">ID:</h6>

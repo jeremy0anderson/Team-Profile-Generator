@@ -1,7 +1,7 @@
 //prompt question declaration / module imports.
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generate = require('./src/generateCards');
+const {generate} = require('./src/generateCards');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
@@ -130,9 +130,9 @@ function mainMenu(){
             case "Add an intern":
                  return getInterns();
             case "Finish building team":
-                for (let i = 0; i < employees.length; i++) {
-                    htmlComponents+=generate(employees[i]);
-                }
+                 for (let i = 0; i < employees.length; i++) {
+                    htmlComponents+=`${generate(employees[i])}`;
+                 }
                 const file = fileHead+ "\n" + htmlComponents+"\n"+fileClose;
                 return generateFile(file);
         }
