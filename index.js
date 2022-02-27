@@ -88,8 +88,10 @@ let fileHead = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="colors.css"/>
 </head>
-<body>`;
-const fileClose = `</body>
+<body>
+<div class="cards-section">`;
+const fileClose = `</div>
+</body>
 </html>`;
 //method for generating an HTML file containing tags/elements created based on user input
 function generateFile(data) {
@@ -133,6 +135,7 @@ function mainMenu(){
                  for (let i = 0; i < employees.length; i++) {
                     htmlComponents+=`${generate(employees[i])}`;
                  }
+                 console.log(htmlComponents);
                 const file = fileHead+ "\n" + htmlComponents+"\n"+fileClose;
                 return generateFile(file);
         }
